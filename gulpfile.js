@@ -1,19 +1,20 @@
 "use strict";
 
-var gulp        =  require('gulp'),
-  plumber       =  require('gulp-plumber'),
-  concat        =  require('gulp-concat'),
-  rename        =  require('gulp-rename'),
-  // less          =  require('gulp-less'),
-  sass          =  require('gulp-sass'),
-  autoprefixer  =  require('gulp-autoprefixer'),
-  cssMinify     =  require('gulp-clean-css'),
-  packer        =  require('gulp-uglify'),
-  hb            =  require('gulp-hb'),
-  sourcemaps    =  require('gulp-sourcemaps'),
-  browserSync   =  require("browser-sync").create(),
-  del           =  require('del'),
-  reload        =  browserSync.reload;
+var gulp        = require('gulp'),
+  plumber       = require('gulp-plumber'),
+  concat        = require('gulp-concat'),
+  rename        = require('gulp-rename'),
+  // less         =  require('gulp-less'),
+  sass          = require('gulp-sass'),
+  autoprefixer  = require('gulp-autoprefixer'),
+  cssMinify     = require('gulp-clean-css'),
+  packer        = require('gulp-uglify'),
+  hb            = require('gulp-hb'),
+  htmlmin       = require('gulp-htmlmin'),
+  sourcemaps    = require('gulp-sourcemaps'),
+  browserSync   = require("browser-sync").create(),
+  del           = require('del'),
+  reload        = browserSync.reload;
 
 var paths = {
   deploy:     'deploy',
@@ -81,7 +82,7 @@ gulp.task('build-css', function() {
     // .pipe(less())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(cssMinify())
+    // .pipe(cssMinify())
     .pipe(rename('main.min.css'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.build + '/css'));
@@ -147,6 +148,12 @@ gulp.task('clean', function() {
 
 // Deploy HTML
 // -----------------------------------------------
+// gulp.task('minify-html', ['deploy-html'], function() {
+//   return gulp.src(paths.deploy + '/*.html')
+//     .pipe(htmlmin({collapseWhitespace: true}))
+//     .pipe(gulp.dest(paths.deploy));
+// });
+
 gulp.task('deploy-html', function() {
   var hbStream = hb()
     // Partials
@@ -158,6 +165,7 @@ gulp.task('deploy-html', function() {
     .pipe(plumber())
     .pipe(hbStream)
     .pipe(rename({ extname: '.html' }))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest(paths.deploy));
 });
 
