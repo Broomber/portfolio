@@ -1,0 +1,25 @@
+//========================================
+// Styles import
+//========================================
+
+// Susy
+@import "../../node_modules/susy/sass/_susy.scss";
+
+// normalize.scss
+@import "../../node_modules/normalize-scss/sass/normalize/_import-now.scss";
+
+// Custom variables and mixins
+@import "variables.scss";
+@import "mixins.scss";
+
+// Custom blocks styles
+//----------------------------------------
+@import "blocks/html.scss";
+@import "blocks/body.scss";
+@import "blocks/font-face.scss";
+@import "blocks/grid.scss";
+@import "blocks/header.scss";
+@import "blocks/footer.scss";
+@import "blocks/main.scss";
+@import "blocks/nav-main.scss";
+

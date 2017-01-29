@@ -1,0 +1,28 @@
+// Header
+
+.header {
+  @extend .clearfix;
+  background-color: $bg-dark;
+  color: $f-lighter;
+
+  &__link {
+    display: block;
+    float: left;
+    padding-left: .5em;
+    padding-right: .5em;
+    line-height: 4rem;
+    font-family: Comfortaa;
+    font-size: 1.5em;
+    color: $f-lighter;
+
+    &:hover {
+      text-decoration: none;
+      color: $brand-primary;
+      background-color: black;
+    }
+
+    &:first-letter {
+      color: $brand-primary;
+    }
+  }
+}

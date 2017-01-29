@@ -1,0 +1,8 @@
+// Footer
+
+.footer {
+  @include span(12);
+  @extend .page-section-small;
+  background-color: $bg-dark;
+  color: $f-lighter;
+}

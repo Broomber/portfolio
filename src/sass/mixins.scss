@@ -1,0 +1,48 @@
+//========================================
+// Mixins
+//========================================
+
+.clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.container {
+  max-width: 70rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.page-section {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5em;
+  text-align: center;
+}
+.page-section-small {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75em;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.75em;
+}
+
+.section-text {}
+
+.section-row {}
+
+.row-item {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.item-img {
+  max-height: 120px;
+}

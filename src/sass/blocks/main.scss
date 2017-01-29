@@ -1,0 +1,150 @@
+//========================================
+// Main styles
+//========================================
+
+// Introduction
+
+.introduction {
+  @include span(12);
+  @extend .page-section;
+  background-color: $bg-darker;
+  color: $f-light;
+
+  &__title {
+    @extend .section-title;
+  }
+
+  &__text {}
+}
+
+
+// Intents
+
+.intents {
+  @include span(12);
+  @extend .page-section;
+  background-color: $bg-light;
+  color: $f-base;
+
+  &__title {
+    @extend .section-title;
+  }
+
+  &__list {
+    @extend .clearfix;
+  }
+}
+
+.intents-item {
+  @include span(12);
+  @extend .row-item;
+
+  @media (min-width: $screen-sm-min) {
+    @include span(6);
+  }
+
+  @media (min-width: $screen-md-min) {}
+
+  &__img {}
+  &__icon {}
+  &__title {}
+  &__text {}
+}
+
+
+// Skills
+
+.skills {
+  @include span(12);
+  @extend .page-section;
+  background-color: $bg-lighter;
+  color: $f-dark;
+
+  &__title {
+    @extend .section-title;
+  }
+
+  &__list {
+    @extend .clearfix;
+  }
+
+}
+
+.skills-item {
+  @include span(12);
+  @extend .row-item;
+
+  @media (min-width: $screen-xs-min) {
+    @include span(6);
+  }
+
+  @media (min-width: $screen-sm-min) {
+    @include span(4);
+  }
+
+  @media (min-width: $screen-md-min) {
+    @include span(3);
+  }
+
+  &__img {}
+  &__caption {}
+}
+
+
+// Portfolio
+
+.portfolio {
+  @include span(12);
+  @extend .page-section;
+  background-color: $bg-light;
+  color: $f-base;
+}
+
+
+// Contacts
+
+.contacts {
+  @include span(12);
+  @extend .page-section;
+  background-color: $bg-darker;
+  color: $f-light;
+}
+
+.contacts-item {
+  padding: 1em;
+  display: block;
+
+  @media (min-width: $screen-sm-min) {
+    display: inline-block;
+  }
+}
+
+.sprite {
+    background-image: url(../img/sprite-contacts.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: -0.2em;
+    margin-right: 0.1em;
+}
+
+.sprite-hh {
+    background-position: -2px -2px;
+}
+
+.sprite-vk {
+    background-position: -26px -2px;
+}
+
+.sprite-phone {
+    background-position: -50px -2px;
+}
+
+
+
+// @media (min-width: $screen-xs-min) {}
+// @media (min-width: $screen-sm-min) {}
+// @media (min-width: $screen-md-min) {}
+// @media (min-width: $screen-lg-min) {}
+// @media (min-width: $screen-xl-min) {}
