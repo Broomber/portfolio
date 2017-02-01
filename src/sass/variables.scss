@@ -2,6 +2,19 @@
 // Variables
 //========================================
 
+
+
+// Fonts
+//----------------------------------------
+
+// Primary font-family
+$font-primary: Verdana, "Geneva CY", "DejaVu Sans", sans-serif;
+
+// Secondary font-family
+$font-secondary: $font-primary;
+
+
+
 // Colors
 //----------------------------------------
 
@@ -25,6 +38,7 @@ $bg-light:              lighten($bg-base, 80%);   // #fff
 $bg-lighter:            lighten($bg-base, 70%);   // #e6e6e6
 $bg-darker:             darken($bg-base, 5%);     // #262626
 $bg-dark:               darken($bg-base, 10%);    // #1a1a1a
+
 
 
 // Media queries breakpoints (Bootstrap 4)
@@ -59,6 +73,21 @@ $screen-xl-desktop:          $screen-lg-min;
 $screen-xs-max:              ($screen-sm-min - 1);
 $screen-sm-max:              ($screen-md-min - 1);
 $screen-md-max:              ($screen-lg-min - 1);
+
+
+
+// Transitions
+//----------------------------------------
+
+// Fast transition
+$fast: 400ms;
+
+// Default speed transition
+$normal: 400ms;
+
+// Default speed transition
+$slow: 600ms;
+
 
 // @media (min-width: $screen-xs-min) {}
 // @media (min-width: $screen-sm-min) {}

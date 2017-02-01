@@ -14,8 +14,9 @@
     padding-left: .75em;
     padding-right: .75em;
     color: $f-lighter;
-    font-family: Comfortaa;
+    font-family: $font-secondary;
     width: 100%;
+    transition: background-color $normal, color $normal; 
 
     @media (min-width: $screen-md-min) {
       width: auto;

@@ -11,9 +11,10 @@
     padding-left: .5em;
     padding-right: .5em;
     line-height: 4rem;
-    font-family: Comfortaa;
+    font-family: $font-secondary;
     font-size: 1.5em;
     color: $f-lighter;
+    transition: background-color $normal, color $normal; 
 
     &:hover {
       text-decoration: none;
