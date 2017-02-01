@@ -12,6 +12,7 @@ var gulp        = require('gulp'),
   hb            = require('gulp-hb'),
   htmlmin       = require('gulp-htmlmin'),
   sourcemaps    = require('gulp-sourcemaps'),
+  imagemin      = require('gulp-imagemin'),
   browserSync   = require("browser-sync").create(),
   del           = require('del'),
   reload        = browserSync.reload;
@@ -114,11 +115,23 @@ gulp.task('build-vendor-js', function() {
 });
 
 
-// Copy Images
+// Build Images
 // -----------------------------------------------
-gulp.task('build-img', function() {
+
+// Minify Images
+gulp.task('build-img', ['build-ico'], function() {
   return gulp
-    .src(paths.images + '.{jpg,png,svg,ico,gif}')
+    .src(paths.images + '.{jpg,png,svg,gif}')
+    .pipe(plumber())
+    .pipe(imagemin())
+    .pipe(gulp.dest(paths.build + '/img'));
+});
+
+// Copy Icons
+// -----------------------------------------------
+gulp.task('build-ico', function() {
+  return gulp
+    .src(paths.images + '.ico')
     .pipe(plumber())
     .pipe(gulp.dest(paths.build + '/img'));
 });
@@ -210,9 +223,21 @@ gulp.task('deploy-vendor-js', function() {
 
 // Deploy Images
 // -----------------------------------------------
-gulp.task('deploy-img', function() {
+
+// Minify Images
+gulp.task('deploy-img', ['deploy-ico'], function() {
   return gulp
-    .src(paths.images + '.{jpg,png,svg,ico,gif}')
+    .src(paths.images + '.{jpg,png,svg,gif}')
+    .pipe(plumber())
+    .pipe(imagemin())
+    .pipe(gulp.dest(paths.deploy + '/img'));
+});
+
+// Copy Icons
+// -----------------------------------------------
+gulp.task('deploy-ico', function() {
+  return gulp
+    .src(paths.images + '.ico')
     .pipe(plumber())
     .pipe(gulp.dest(paths.deploy + '/img'));
 });
@@ -299,7 +324,7 @@ gulp.task('default', ['build'],
 
 // Build Task
 // -----------------------------------------------
-gulp.task('build', ['clean', 'build-html', 'build-css', 'build-js', 'build-img', 'build-fonts']);
+gulp.task('build', ['build-html', 'build-css', 'build-js', 'build-img', 'build-fonts']);
 
 
 // Deploy Task
