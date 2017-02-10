@@ -19,6 +19,46 @@
   margin-left: auto;
 }
 
+.header-link {
+  display: block;
+  float: left;
+  width: 100%;
+  position: relative;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  color: $f-lighter;
+  font-family: $font-secondary;
+  transition: background-color $normal, color $normal; 
+
+  @media (min-width: $screen-md-min) {
+    width: auto;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    transform: scaleX(0);
+    background-color: $brand-primary;
+    transition: transform $normal; 
+  }
+
+  &:hover {
+    background-color: black;
+    text-decoration: none;
+    color: $brand-primary;
+
+    &:after {
+      transform: scaleX(1);
+      visibility: visible;
+    }
+  }
+}
+
 .page-section {
   padding-top: 3.5rem;
   padding-bottom: 3.5em;
