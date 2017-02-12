@@ -48,13 +48,11 @@
   }
 
   &:hover {
-    background-color: black;
     text-decoration: none;
     color: $brand-primary;
 
     &:after {
       transform: scaleX(1);
-      visibility: visible;
     }
   }
 }
