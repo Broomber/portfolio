@@ -31,7 +31,7 @@
   }
 
   &__list {
-    @extend .clearfix;
+    @extend .section-row;
   }
 }
 
@@ -65,7 +65,7 @@
   }
 
   &__list {
-    @extend .clearfix;
+    @extend .section-row;
   }
 
 }
@@ -98,6 +98,10 @@
   @extend .page-section;
   background-color: $bg-light;
   color: $f-base;
+
+  &__title {
+    @extend .section-title;
+  }
 }
 
 
@@ -108,10 +112,14 @@
   @extend .page-section;
   background-color: $bg-darker;
   color: $f-light;
+
+  &__title {
+    @extend .section-title;
+  }
 }
 
 .contacts-item {
-  padding: 1em;
+  margin: 1rem;
   display: block;
 
   @media (min-width: $screen-sm-min) {
@@ -120,25 +128,25 @@
 }
 
 .sprite {
-    background-image: url(../img/sprite-contacts.png);
-    background-repeat: no-repeat;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-bottom: -0.2em;
-    margin-right: 0.1em;
+  background-image: url(../img/sprite-contacts.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-bottom: -0.2em;
+  margin-right: 0.1em;
 }
 
 .sprite-hh {
-    background-position: -2px -2px;
+  background-position: -2px -2px;
 }
 
 .sprite-vk {
-    background-position: -26px -2px;
+  background-position: -26px -2px;
 }
 
 .sprite-phone {
-    background-position: -50px -2px;
+  background-position: -50px -2px;
 }
 
 
