@@ -1,9 +1,11 @@
 .nav-main {
+  display: none;
   float: right;
   width: 100%;
   text-align: center;
 
   @media (min-width: $screen-md-min) {
+    display: block;
     width: auto;
     text-align: left;
   }
