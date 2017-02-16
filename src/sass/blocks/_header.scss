@@ -3,11 +3,11 @@
 .header {
   @extend .clearfix;
   background-color: $bg-dark;
-  line-height: 4rem;
+  line-height: 4em;
 
   &__link {
     @extend .header-link;
-    font-size: 1.5rem;
+    font-size: 1.5em;
 
     &:first-letter {
       color: $brand-primary;

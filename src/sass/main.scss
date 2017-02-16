@@ -2,23 +2,21 @@
 // Styles import
 //========================================
 
-// Susy
-@import "../../node_modules/susy/sass/_susy.scss";
+// Grid
+@import "_grid.scss";
 
 // normalize.scss
 @import "../../node_modules/normalize-scss/sass/normalize/_import-now.scss";
 
 // Custom variables and mixins
-@import "variables.scss";
-@import "mixins.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
 
 // Custom blocks styles
 //----------------------------------------
-@import "blocks/html.scss";
-@import "blocks/body.scss";
-@import "blocks/grid.scss";
-@import "blocks/header.scss";
-@import "blocks/footer.scss";
-@import "blocks/main.scss";
-@import "blocks/nav-main.scss";
+@import "blocks/_html.scss";
+@import "blocks/_header.scss";
+@import "blocks/_footer.scss";
+@import "blocks/_main.scss";
+@import "blocks/_nav-main.scss";
 

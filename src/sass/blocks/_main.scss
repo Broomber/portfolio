@@ -5,7 +5,6 @@
 // Introduction
 
 .introduction {
-  @include span(12);
   @extend .page-section;
   background-color: $bg-darker;
   color: $f-light;
@@ -21,7 +20,6 @@
 // Intents
 
 .intents {
-  @include span(12);
   @extend .page-section;
   background-color: $bg-light;
   color: $f-base;
@@ -36,11 +34,10 @@
 }
 
 .intents-item {
-  @include span(12);
   @extend .row-item;
 
   @media (min-width: $screen-sm-min) {
-    @include span(6);
+    width: span(6);
   }
 
   @media (min-width: $screen-md-min) {}
@@ -55,7 +52,6 @@
 // Skills
 
 .skills {
-  @include span(12);
   @extend .page-section;
   background-color: $bg-lighter;
   color: $f-dark;
@@ -71,19 +67,18 @@
 }
 
 .skills-item {
-  @include span(12);
   @extend .row-item;
 
   @media (min-width: $screen-xs-min) {
-    @include span(6);
+    width: span(6);
   }
 
   @media (min-width: $screen-sm-min) {
-    @include span(4);
+    width: span(4);
   }
 
   @media (min-width: $screen-md-min) {
-    @include span(3);
+    width: span(3);
   }
 
   &__img {}
@@ -94,7 +89,6 @@
 // Portfolio
 
 .portfolio {
-  @include span(12);
   @extend .page-section;
   background-color: $bg-light;
   color: $f-base;
@@ -108,7 +102,6 @@
 // Contacts
 
 .contacts {
-  @include span(12);
   @extend .page-section;
   background-color: $bg-darker;
   color: $f-light;
@@ -119,7 +112,7 @@
 }
 
 .contacts-item {
-  margin: 1rem;
+  margin: 1em;
   display: block;
 
   @media (min-width: $screen-sm-min) {

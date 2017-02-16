@@ -159,14 +159,8 @@ gulp.task('clean', function() {
 // DEPLOY
 // ===============================================
 
-// Deploy HTML
+// Deploy HTML/PHP
 // -----------------------------------------------
-// gulp.task('minify-html', ['deploy-html'], function() {
-//   return gulp.src(paths.deploy + '/*.html')
-//     .pipe(htmlmin({collapseWhitespace: true}))
-//     .pipe(gulp.dest(paths.deploy));
-// });
-
 gulp.task('deploy-html', function() {
   var hbStream = hb()
     // Partials
@@ -177,7 +171,8 @@ gulp.task('deploy-html', function() {
     .src(paths.html + 'pages/*.hbs')
     .pipe(plumber())
     .pipe(hbStream)
-    .pipe(rename({ extname: '.html' }))
+    // .pipe(rename({ extname: '.html' }))
+    .pipe(rename({ extname: '.php' }))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest(paths.deploy));
 });
