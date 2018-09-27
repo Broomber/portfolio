@@ -10,7 +10,6 @@ var gulp        = require('gulp'),
   cssMinify     = require('gulp-clean-css'),
   packer        = require('gulp-uglify'),
   hb            = require('gulp-hb'),
-  htmlmin       = require('gulp-htmlmin'),
   sourcemaps    = require('gulp-sourcemaps'),
   imagemin      = require('gulp-imagemin'),
   browserSync   = require("browser-sync").create(),
@@ -171,9 +170,7 @@ gulp.task('deploy-html', function() {
     .src(paths.html + 'pages/*.hbs')
     .pipe(plumber())
     .pipe(hbStream)
-    // .pipe(rename({ extname: '.html' }))
-    .pipe(rename({ extname: '.php' }))
-    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(rename({ extname: '.html' }))
     .pipe(gulp.dest(paths.deploy));
 });
 

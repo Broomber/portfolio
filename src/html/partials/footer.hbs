@@ -1,11 +1,3 @@
 <footer class="footer">
-<?php
-  function auto_copyright($year = 'auto'){
-     if(intval($year) == 'auto'){ $year = date('Y'); }
-     if(intval($year) == date('Y')){ echo intval($year); }
-     if(intval($year) < date('Y')){ echo intval($year) . ' - ' . date('Y'); }
-     if(intval($year) > date('Y')){ echo date('Y'); }
-  }
-?>
-  <p><span><?php auto_copyright(2016);?></span>.<br> Сайт создан Бондаренко Юрием.</p>
+  <p>2016 - 2018</p>
 </footer>

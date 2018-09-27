@@ -28,27 +28,39 @@
   color: $f-lighter;
   transition: color $normal; 
 
-  &:after {
+/*  &:after {
     content: "";
     display: block;
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 1px;
+    height: 0;
     width: 100%;
     transform: scaleX(0);
     background-color: $bg-dark;
-    transition: transform $normal; 
-  }
+    transition: transform $normal;
+    transition: height $fast;
+  }*/
 
   &:hover {
     text-decoration: none;
     color: $brand-primary;
 
-    &:after {
+    /*&:after {
       transform: scaleX(1);
+      height: 2px;
       background-color: $brand-primary;
-    }
+    }*/
+  }
+  
+  &:active {
+    text-decoration: none;
+    color: $brand-primary;
+  }
+
+  &:focus {
+    text-decoration: none;
+    color: $brand-primary;
   }
 }
 
@@ -65,9 +77,46 @@
   text-align: center;
 }
 
-.section-title {
-  font-size: 1.75em;
+.h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
 }
+
+.h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+.h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+.h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+
+.h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+.h6 {
+  font-size: 0.67em;
+  margin: 2.33em 0;
+}
+
+.small {
+  font-size: 75%;
+}
+
+.text-muted {
+  color: $text-muted;
+}
+
+
 
 .section-text {}
 
@@ -77,10 +126,19 @@
 
 .row-item {
   @include span(12);
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
 
 .item-img {
   max-height: 120px;
+}
+
+.inline-item {
+  display: inline-block;
+  width: auto;
+  float: none;
+  margin-right: -1.5%;
+  vertical-align: top;
+}
+
+.inline-row {
 }

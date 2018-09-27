@@ -1,6 +1,40 @@
-//========================================
-// Main styles
-//========================================
+// Header
+
+.header {
+  display: none;
+  @extend .clearfix;
+  background-color: $bg-dark;
+  line-height: 4em;
+
+  &__link {
+    @extend .header-link;
+    font-size: 1.5em;
+
+    &:first-letter {
+      color: $brand-primary;
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    display: block;
+  }
+}
+
+.nav-main {
+  float: right;
+  display: block;
+  width: auto;
+  text-align: left;
+
+  &__link {
+    @extend .header-link;
+    float: none;
+
+    @media (min-width: $screen-md-min) {
+      float: left;
+    }
+  }
+}
 
 // Introduction
 
@@ -8,10 +42,6 @@
   @extend .page-section;
   background-color: $bg-darker;
   color: $f-light;
-
-  &__title {
-    @extend .section-title;
-  }
 
   &__text {}
 }
@@ -24,17 +54,12 @@
   background-color: $bg-light;
   color: $f-base;
 
-  &__title {
-    @extend .section-title;
-  }
-
-  &__list {
-    @extend .section-row;
-  }
+  &__list {}
 }
 
 .intents-item {
-  @extend .row-item;
+  @extend .inline-item;
+  padding: 15px 5%;
 
   @media (min-width: $screen-sm-min) {
     width: span(6);
@@ -56,32 +81,27 @@
   background-color: $bg-lighter;
   color: $f-dark;
 
-  &__title {
-    @extend .section-title;
-  }
-
-  &__list {
-    @extend .section-row;
-  }
+  &__list {}
 
 }
 
 .skills-item {
-  @extend .row-item;
+  @extend .inline-item;
+  padding: 15px 5%;
 
-  @media (min-width: $screen-xs-min) {
-    width: span(6);
+  &__img {
+    max-height: 50px;
+
+    @media (min-width: $screen-xs-min) {
+      max-height: 60px;
+    }
+    @media (min-width: $screen-sm-min) {
+      max-height: 80px;
+    }
+    @media (min-width: $screen-md-min) {
+      max-height: 100px;
+    }
   }
-
-  @media (min-width: $screen-sm-min) {
-    width: span(4);
-  }
-
-  @media (min-width: $screen-md-min) {
-    width: span(3);
-  }
-
-  &__img {}
   &__caption {}
 }
 
@@ -92,10 +112,67 @@
   @extend .page-section;
   background-color: $bg-light;
   color: $f-base;
+}
 
-  &__title {
-    @extend .section-title;
+.portfolio-item {
+  @extend .inline-item;
+  padding: 15px 5%;
+
+  @media (min-width: $screen-sm-min) {
+    max-width: span(6);
   }
+
+  &__link {}
+  &__img {
+    max-height: 50px;
+
+    @media (min-width: $screen-xs-min) {
+      max-height: 60px;
+    }
+    @media (min-width: $screen-sm-min) {
+      max-height: 80px;
+    }
+    @media (min-width: $screen-md-min) {
+      max-height: 100px;
+    }
+  }
+  &__caption {}
+}
+
+
+// Profiles
+
+.profiles {
+  @extend .page-section;
+  background-color: $bg-lighter;
+  color: $f-base;
+
+  &__list {
+    @extend .section-row;
+  }
+}
+
+.profiles-item {
+  @extend .inline-item;
+  padding: 15px 5%;
+
+  &__link {}
+  &__img {
+    max-height: 20px;
+
+    @media (min-width: $screen-xs-min) {
+      max-height: 25px;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      max-height: 30px;
+    }
+
+    @media (min-width: $screen-md-min) {
+      max-height: 35px;
+    }
+  }
+  &__caption {}
 }
 
 
@@ -105,10 +182,6 @@
   @extend .page-section;
   background-color: $bg-darker;
   color: $f-light;
-
-  &__title {
-    @extend .section-title;
-  }
 }
 
 .contacts-item {
@@ -140,6 +213,14 @@
 
 .sprite-phone {
   background-position: -50px -2px;
+}
+
+// Footer
+
+.footer {
+  @extend .page-section-small;
+  background-color: $bg-dark;
+  color: $f-lighter;
 }
 
 
