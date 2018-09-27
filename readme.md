@@ -11,7 +11,7 @@ Install the dependencies and devDependencies, build project and start local serv
 
 ```sh
 $ git clone https://github.com/Broomber/portfolio.git
-$ cd vice-city-menu
+$ cd portfolio
 $ npm i
 $ npm update
 $ gulp
@@ -22,7 +22,7 @@ Install the dependencies and devDependencies and make build for deploy on server
 
 ```sh
 $ git clone https://github.com/Broomber/portfolio.git
-$ cd vice-city-menu
+$ cd portfolio
 $ npm i
 $ npm update
 $ gulp deploy
