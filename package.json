@@ -5,7 +5,8 @@
   "homepage": "http://broomber.github.io/tic-tac-toe",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "predeploy": "gulp build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "",
