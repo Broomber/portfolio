@@ -19,6 +19,7 @@ Thumbs.db
 ######################
 /bootstrap/compiled.php
 /vendor/*
+build
 composer.phar
 composer.lock
 .htaccess
