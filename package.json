@@ -2,22 +2,15 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "My portfolio",
-  "homepage": "http://broomber.github.io/tic-tac-toe",
+  "homepage": "http://broomber.github.io/portfolio",
   "main": "index.html",
-  "scripts": {
-    "predeploy": "gulp build",
-    "deploy": "gh-pages -d build"
-  },
   "repository": {
     "type": "",
     "url": ""
   },
   "author": "Bondarnko Yuriy",
   "license": "ISC",
-  "dependencies": {
-    "gulp-imagemin": "^3.1.1",
-    "normalize-scss": "^6.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.24.7",
     "del": "^2.2.2",
@@ -28,6 +21,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-hb": "~5.1.4",
     "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.1",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
@@ -35,11 +29,16 @@
     "gulp-uglify": "^2.0.0",
     "handlebars": "^4.0.12",
     "handlebars-helpers": "^0.7.5",
-    "susy": "^2.2.12"
+    "normalize-scss": "^6.0.0",
+    "susy": "^2.2.14"
   },
   "keywords": [
     "web",
     "html",
     "css"
-  ]
+  ],
+  "scripts": {
+    "predeploy": "gulp deploy",
+    "deploy": "gh-pages -d deploy"
+  }
 }
